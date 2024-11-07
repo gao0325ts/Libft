@@ -6,7 +6,7 @@
 /*   By: stakada <stakada@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:33:48 by stakada           #+#    #+#             */
-/*   Updated: 2024/10/24 20:36:36 by stakada          ###   ########.fr       */
+/*   Updated: 2024/11/07 21:43:26 by stakada          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 void ft_bzero(void *s, size_t n)
 {
-	unsigned char *s_copy;
-
-	s_copy = (unsigned char *)s;
-	while (n--)
-		*s_copy++ = '\0';
+	ft_memset(s, '\0', n);
 }
