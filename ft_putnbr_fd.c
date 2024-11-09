@@ -1,29 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: stakada <stakada@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/07 19:34:28 by stakada           #+#    #+#             */
-/*   Updated: 2024/11/10 00:12:57 by stakada          ###   ########.fr       */
+/*   Created: 2024/11/10 00:02:08 by stakada           #+#    #+#             */
+/*   Updated: 2024/11/10 00:10:04 by stakada          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+void ft_putnbr_fd(int n, int fd)
 {
-	int i;
+    char c;
+    long num;
 
-	i = ft_strlen(s);
-	if ((char)c == '\0')
-		return ((char *)&s[i]);
-	while (i >= 0)
-	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i--;
-	}
-	return (NULL);
+    num = (long)n;
+    if (num < 0)
+    {
+        write(fd, "-", 1);
+        num = -num;
+    }
+    if (num < 10)
+    {
+        c = num + '0';
+        write(fd, &c, 1);
+        return ;
+    }
+    ft_putnbr_fd(num / 10, fd);
+    c = num % 10 + '0';
+    write(fd, &c, 1);
 }
