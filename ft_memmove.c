@@ -6,17 +6,17 @@
 /*   By: stakada <stakada@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 20:38:40 by stakada           #+#    #+#             */
-/*   Updated: 2024/11/05 21:44:14 by stakada          ###   ########.fr       */
+/*   Updated: 2024/11/10 00:22:33 by stakada          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char *d;
-	const unsigned char *s;
-	int i;
+	unsigned char		*d;
+	const unsigned char	*s;
+	int					i;
 
 	d = (unsigned char *)dest;
 	s = (const unsigned char *)src;

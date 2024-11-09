@@ -6,16 +6,16 @@
 /*   By: stakada <stakada@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 21:19:45 by stakada           #+#    #+#             */
-/*   Updated: 2024/11/08 22:08:43 by stakada          ###   ########.fr       */
+/*   Updated: 2024/11/10 00:22:53 by stakada          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int count_words(char const *s, char c)
+static int	count_words(char const *s, char c)
 {
-	int count;
-	
+	int	count;
+
 	count = 0;
 	while (*s)
 	{
@@ -31,11 +31,11 @@ static int count_words(char const *s, char c)
 	return (count);
 }
 
-static char **contain_words(char **strs, char const *s, char c, int words)
+static char	**contain_words(char **strs, char const *s, char c, int words)
 {
-	int i;
-	int len;
-	
+	int	i;
+	int	len;
+
 	i = 0;
 	while (i < words)
 	{
@@ -60,10 +60,10 @@ static char **contain_words(char **strs, char const *s, char c, int words)
 	return (strs);
 }
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	int words;
-	char **strs;
+	int		words;
+	char	**strs;
 
 	words = count_words(s, c);
 	strs = (char **)malloc(sizeof(char *) * (words + 1));

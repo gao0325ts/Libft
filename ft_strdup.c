@@ -6,16 +6,16 @@
 /*   By: stakada <stakada@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 20:18:14 by stakada           #+#    #+#             */
-/*   Updated: 2024/11/08 20:22:28 by stakada          ###   ########.fr       */
+/*   Updated: 2024/11/10 00:22:58 by stakada          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-	char *new;
-	int i;
+	char	*new;
+	int		i;
 
 	new = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (!new)

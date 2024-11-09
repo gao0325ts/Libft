@@ -6,19 +6,19 @@
 /*   By: stakada <stakada@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/05 23:43:44 by stakada           #+#    #+#             */
-/*   Updated: 2024/11/08 16:43:04 by stakada          ###   ########.fr       */
+/*   Updated: 2024/11/10 00:23:05 by stakada          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	dst_len;
 	size_t	src_len;
 	size_t	add_len;
-	
+
 	i = 0;
 	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
