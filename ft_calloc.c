@@ -6,7 +6,7 @@
 /*   By: stakada <stakada@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 20:07:33 by stakada           #+#    #+#             */
-/*   Updated: 2024/11/08 20:17:35 by stakada          ###   ########.fr       */
+/*   Updated: 2024/11/10 00:16:14 by stakada          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ void *ft_calloc(size_t nmemb, size_t size)
 	result = malloc(nmemb * size);
 	if (!result)
 		return (NULL);
+	ft_bzero(result, nmemb * size);
 	return (result);
 }
