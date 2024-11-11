@@ -6,14 +6,14 @@
 /*   By: stakada <stakada@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 16:54:08 by stakada           #+#    #+#             */
-/*   Updated: 2024/11/11 16:55:33 by stakada          ###   ########.fr       */
+/*   Updated: 2024/11/11 19:56:02 by stakada          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-    del(lst->content);
-    free(lst); 
+	del(lst->content);
+	free(lst);
 }
