@@ -6,6 +6,7 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -rf
 
+INCLUDES = ./
 SRCS = ft_isalpha.c \
 		ft_isdigit.c \
 		ft_isalnum.c \
@@ -64,7 +65,7 @@ $(NAME): $(OBJS)
 	ar rcs $@ $^
 
 .c.o:
-	$(CC) $(CFLAGS) libft.h -c $<
+	$(CC) $(CFLAGS) -I $(INCLUDES) -c $<
 
 bonus:
 	@make WITH_BONUS=1
