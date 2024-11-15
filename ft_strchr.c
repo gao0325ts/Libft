@@ -6,7 +6,7 @@
 /*   By: stakada <stakada@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/07 19:31:22 by stakada           #+#    #+#             */
-/*   Updated: 2024/11/10 00:22:55 by stakada          ###   ########.fr       */
+/*   Updated: 2024/11/15 21:48:12 by stakada          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,5 @@ char	*ft_strchr(const char *s, int c)
 	}
 	if ((char)c == '\0')
 		return ((char *)&s[i]);
-	else
-		return (NULL);
+	return (NULL);
 }
